@@ -10,6 +10,9 @@ public class Game extends ConsoleProgram{
 
 	private void hangman() {
 		String answer = wordList.getWord();
+		if(answer.equals("")) {
+			print("Finish");
+		}
 		char[] problemWord = answer.toCharArray();
 		boolean[] guessed = new boolean[problemWord.length];
 		int leftGuessing = 8;
@@ -73,6 +76,7 @@ public class Game extends ConsoleProgram{
 
 	public void run() {
 		wordList = WordList.getInstance();
+		System.out.println(wordList.getWordListSize());
 		while(wordList.getWordListSize() > round) {
 			canvas.reset();
 			incorrectLetter = new StringBuilder();

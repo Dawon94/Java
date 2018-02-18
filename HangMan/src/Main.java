@@ -5,7 +5,7 @@ public class Main {
 		// TODO Auto-generated method stub
 		
 		Game game = new Game();
-		game.start();
+		game.start(args);
 		
 	}
 
