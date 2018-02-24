@@ -24,7 +24,6 @@ public class WordList {
 		try {
 			fr = new FileReader("C:\\Users\\ssop6\\eclipse-workspace\\HangMan\\words.txt");
 		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		

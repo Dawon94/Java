@@ -1,0 +1,5 @@
+John;john@gmail.com;2389-2899
+Chris;chris@acme.com;3278-2891
+John;john_doh@gmail.com;2122-2899
+Alfred;alfred@yahoo.com;2891-2897
+Bach;bach@yahoo.com;2328-1829
