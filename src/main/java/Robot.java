@@ -1,21 +1,22 @@
 public class Robot {
-    public static final RobotCommand COMMAND_WALK = new RobotCommand("WALK");
-    public static final RobotCommand COMMAND_STOP = new RobotCommand("STOP");
-    public static final RobotCommand COMMAND_JUMP = new RobotCommand("JUMP");
-
-
     private final String _name;
+
+    public enum Command {
+        WALK,
+        STOP,
+        JUMP,
+    }
 
     public Robot(String name) {
         _name = name;
     }
 
-    public void order(RobotCommand command) {
-        if (command == COMMAND_WALK) {
+    public void order(Robot.Command command) {
+        if (command == Command.WALK) {
             System.out.println(_name + " walks.");
-        } else if (command == COMMAND_STOP) {
+        } else if (command == Command.STOP) {
             System.out.println(_name + " stops.");
-        } else if (command == COMMAND_JUMP) {
+        } else if (command == Command.JUMP) {
             System.out.println(_name + " jumps.");
         } else {
             System.out.println("Command error. command = " + command);

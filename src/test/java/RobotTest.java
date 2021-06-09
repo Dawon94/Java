@@ -24,7 +24,7 @@ public class RobotTest {
 
     @ParameterizedTest
     @MethodSource("provideRobotCommandExpect")
-    public void testMain(RobotCommand command, String expect) {
+    public void testMain(Robot.Command command, String expect) {
         //when
         robot.order(command);
 
@@ -35,9 +35,9 @@ public class RobotTest {
 
     private static Stream<Arguments> provideRobotCommandExpect() {
         return Stream.of(
-                arguments(Robot.COMMAND_WALK, robot.getName() + " walks.\n"),
-                arguments(Robot.COMMAND_STOP, robot.getName() + " stops.\n"),
-                arguments(Robot.COMMAND_JUMP, robot.getName() + " jumps.\n")
+                arguments(Robot.Command.WALK, robot.getName() + " walks.\n"),
+                arguments(Robot.Command.STOP, robot.getName() + " stops.\n"),
+                arguments(Robot.Command.JUMP, robot.getName() + " jumps.\n")
         );
     }
 
