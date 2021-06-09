@@ -24,7 +24,7 @@ public class RobotTest {
 
     @ParameterizedTest
     @MethodSource("provideRobotCommandExpect")
-    public void testMain(int command, String expect) {
+    public void testMain(RobotCommand command, String expect) {
         //when
         robot.order(command);
 
